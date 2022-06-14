@@ -1,0 +1,33 @@
+﻿@model FilmTicketReservation.Models.OrderDetail
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+ <hr />
+ <div class="container d-flex">
+     <div class = "content container-fluid">
+             <h1>@Html.DisplayFor(model => model.MovieTitle)</h1>
+         <table class = "table">
+             <thead>
+             </thead>
+             <tbody>
+                <tr>
+                  <th scope="row">@Html.DisplayNameFor(model => model.MoviePrice)</th>
+                  <td>$@Html.DisplayFor(model => model.MoviePrice)</td>
+                </tr>
+                <tr>
+                  <th scope="row">@Html.DisplayNameFor(model => model.Quantity)</th>
+                  <td>@Html.DisplayFor(model => model.Quantity)</td>
+                </tr>
+            </tbody>
+         </table>
+        
+            <a class="btn btn-primary" asp-controller= "Orders" asp-action= "Index">Back to list </a> 
+        
+        
+
+     </div>
+</div>
+
